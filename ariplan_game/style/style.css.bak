@@ -1,0 +1,46 @@
+/*背景*/
+*{margin:0;padding:0;}
+ul,li,ol{list-style:none;}
+
+.wrap{
+	width:500px;height:500px;background:white;
+	margin:20px auto;position:relative;overflow:hidden;
+}
+
+/*飞机*/
+.airplaneDiv{
+	width:40px;height:40px;position:absolute;
+	cursor:pointer;
+	background-image:url('../img/airBg.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+
+/*子弹*/
+.bulletDiv{
+	width:5px;height:30px;background:#f00;border-radius:100%;
+	position:absolute;
+}
+
+/*目标*/
+.targrtDiv{
+	width:60px;height:150px;
+	position:absolute;top:-60px;font-size:22px;color:#fff;
+	background-repeat:no-repeat;
+	background-size:contain;
+}
+
+/*爆炸*/
+.no_boom{
+	background-image:url('../img/target_icon.png');
+}
+
+@keyframes mymove{
+	from{opacity:1;}
+	to{opacity:0;}
+}
+.yes_boom{
+	background-image:url('../img/boom.png');
+	animation:mymove 0.2s;
+	animation-fill-mode:forwards;
+}
