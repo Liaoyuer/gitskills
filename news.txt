@@ -1,0 +1,37 @@
+﻿<html>
+<head>
+ <style>
+	*{margin:0;padding:0;}
+	#wrap{
+		margin:25px auto;
+		width:400px;
+		}
+	#wrap ul{
+		height:25px;
+		text-decoration:none;
+		list-style:none;
+		}
+	#wrap ul li{
+		padding:10px 20px;
+		color:blue;
+		background:rgb(240,240,240);}
+	#wrap ul p{line-height:25px;
+		padding-left:15px;
+		color:blue;
+		background:#cca;}
+	#wrap ul li span{color:pink;
+			padding-right:10px;}
+	
+</style>
+</head>
+<body>
+	<div id='wrap'>
+	     <ul>
+		<p>今日要闻</p>
+		<li><span>习近平</span>全面提高中央和国家机关党的建设质量</li>
+		<li><span>金句来</span>习近平在党的建设工作会议上的讲话金句</li>
+		<li><span>通电话</span>致电祝贺米歇尔当选欧洲理事会主席 理上</li>
+		<li><span>美国啊</span>美国商务部宣布将解禁对华为供货黑名单
+	</div>
+</body>
+</html>

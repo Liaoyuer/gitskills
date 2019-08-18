@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var mydate=new Date();
+  var xingqi=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+  var a=mydate.getDay();
+  document.write(mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDate()+"日 "+xingqi[a]+"<br/>");
+  
+
+  
+  
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  var myarr=scoreStr.split(";");//按分隔符(;)将字符串分隔开并返回此数组
+  document.write(myarr+"<br/>");
+  var myarr2=new Array();
+  for (var i=0;i<myarr.length ;i++ )
+  {
+	  var tarr=myarr[i].split(":");
+	  document.write(tarr+"<br/>");
+	  myarr2.push(parseInt(tarr[1]));
+  }
+  document.write(myarr2+"<br/>");//创建整数数组
+ 
+
+
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  var sum=0;
+  for (var i=0;i<myarr2.length ;i++ )
+  {
+	  sum+=myarr2[i];
+  }
+  var ave=sum/myarr2.length;
+  document.write("--班级总分为"+ave);
+
+
+</script>
+ </head>
+ <body>
+  
+ </body>
+</html>

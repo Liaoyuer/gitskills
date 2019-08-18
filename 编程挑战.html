@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  *{margin:0;padding:0;}
+  body{font-size:22px;}
+	#p{
+		height:300px;
+		width:400px;
+		line-height:20px;
+		border:red solid 1px;
+		padding:5px;
+		color:black;
+		background:skyblue;}
+	.hanggao{
+		line-height:15px;
+		text-indent:2em;}
+  </style>
+
+ </head>
+ <body>
+ <div id=all>
+ <h5 id="h5">JavaScript课程</h5>
+ <div id="p">
+  <h5>JavaScript为网页添加动态效果并实现与用户交互的功能。</h5>
+  <p>1. JavaScript入门篇，让不懂JS的你，快速了解JS。</p>
+  <p>2. JavaScript进阶篇，让你掌握JS的基础语法、函数、数组、事件、内置对象、BOM浏览器、DOM操作。</p>
+  <p>3. 学完以上两门基础课后，在深入学习JavaScript的变量作用域、事件、对象、运动、cookie、正则表达式、ajax等课程。</p>
+ </div>
+ </div>
+ <form>
+  <input type="button" value="改变样式" name="changecolor" onclick="bian()" />
+  <input type="button" value="改变行高" name="changecolor" onclick="hanggao()" />
+  <input type="button" value="隐藏内容" name="changecolor" onclick="hid()" />
+  <input type="button" value="显现内容" name="changecolor" onclick="xian()" />
+  <input type="button" value="取消重置" name="changecolor" onclick="cancel()" />
+  </form>
+    <script>
+	var a=document.getElementById("p");
+//改变背景样式函数
+	function bian()
+	{
+		a.style.color=prompt("你想字变成什么颜色","blue");
+		a.style.backgroundColor=prompt("你想字变成什么颜色","#e7f4fe");
+	}
+//改变行高函数
+	function hanggao()
+	{
+		a.style.width=prompt("你想要什么宽度","500")+"px";
+		a.style.height=prompt("你想要什么高度","300")+"px";
+	}
+//隐藏内容函数 
+	function hid()
+	{
+		a.style.display="none";
+	}
+//显示内容函数
+	function xian()
+	{
+		a.style.display="block";
+	}
+//取消设置函数
+	function cancel()
+	{
+		var sure=confirm("你确定要重置吗？");
+		
+		if(sure==true)
+		{
+		a.removeAttribute("style");
+		}
+		
+	}
+  </script>
+ </body>
+</html>

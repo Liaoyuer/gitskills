@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+  function allselect()//全选
+  {
+	var hobby=document.getElementsByTagName("input");
+	for (var i=0;i<6 ;i++ )
+	{
+		if(hobby[i].type=="checkbox")
+		hobby[i].checked=true;
+	}
+  }
+  function clearselect()//全不选
+  {
+	  var hobby=document.getElementsByName("hobby");
+	  for (var i=0;i<6 ;i++ )
+	  {
+		  hobby[i].checked=false;
+	  }
+  }
+  function insertselect()
+  {
+	  var a=document.getElementById("ins").value;
+	  var hobby=document.getElementById("hobby"+a);
+	  hobby.checked=true;
+  }
+  </script>
+ </head>
+ <body>
+  <p>请选择你的的爱好：</p>
+  <form>
+	<input type="checkbox" name="hobby" id="hobby1" />音乐
+	<input type="checkbox" name="hobby" id="hobby2" />登山
+	<input type="checkbox" name="hobby" id="hobby3" />游泳
+	<input type="checkbox" name="hobby" id="hobby4" />阅读
+	<input type="checkbox" name="hobby" id="hobby5" />打球
+	<input type="checkbox" name="hobby" id="hobby6" />跑步
+	<input type="button" name="all" id="hobby7" value="全选" onclick="allselect()" />
+	<input type="button" name="notall" id="hobby8" value="全不选" onclick="clearselect()" />
+	<p>请输入您要选择的爱好的序号，序号为1-6：</p>
+	<input type="text" name="insertnum" id="ins" />
+	<input type="button" name="surea" id="hobby9" value="确定" onclick="insertselect()" />
+  </form>
+ </body>
+</html>

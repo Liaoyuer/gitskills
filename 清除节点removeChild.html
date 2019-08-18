@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+<body>
+<div id="content">
+  <h1>html</h1>
+  <h1>php</h1>
+  <h1>javascript</h1>
+  <h1>jquery</h1>
+  <h1>java</h1>
+</div>
+
+<script type="text/javascript">
+function clearText() {
+  var content=document.getElementById("content");
+  var conchlid=content.childNodes;
+  // 在此完成该函数
+  for(var i=0;i<conchlid.length;i++)
+  {
+      if(conchlid&&conchlid.nodeType!=0)
+      var x=content.removeChild(conchlid[i]);
+  }
+  document.write("Delete:"+x.innerHTML);
+}
+</script>
+<button onclick="clearText()">清除节点内容</button>
+</body>
+</html>

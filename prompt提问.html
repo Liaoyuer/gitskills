@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  
+	var myname=prompt("请输入您的姓名：");
+	if(myname!==null)
+		{alert("你好"+myname);}
+	else
+		{alert("你好 my friend:");}
+	
+	function score(){
+		score=prompt(myname+"期末考数学考了几分呀？");
+		if(score>=90)
+		{document.write(myname+"，那你很优秀啊！");}
+		else if(score>=60)
+		{document.write(myname+"，没关系及格就好！");}
+		else
+		{document.write(myname+"，那你得努力啦！");}
+	}
+  </script>
+ </head>
+ <body>
+  <form>
+	<input type="button" value="对成绩测评" onclick="score()" />
+  </form>
+ </body>
+</html>

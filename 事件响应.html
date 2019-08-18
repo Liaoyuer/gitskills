@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  #txt{width:600px;height:500px;}
+  </style>
+  <script type="text/javascript">
+	function a()
+	{
+		//var place=document.getElementById("place").value;
+		var flower=document.getElementById("flower").value;
+		var color=document.getElementById("color").value;
+		var city=document.getElementById("city").value;
+		var star=document.getElementById("star").value;
+		var tag=document.getElementById("tag").value;
+		document.getElementById("txt").value=("你拿着"+color+"的"+flower+"在"+city+"对着"+star+"表白，"+star+"说："+tag);
+	}
+  </script>
+ </head>
+ <body>
+  <!-- 你在哪座城市：<input type="text" id="place" /> -->
+  <table>
+ <tr><td>喜欢什么花：</td><td><input type="text" id="flower" /></td>
+ <td>喜欢什么颜色：</td><td><input type="text" id="color" /></td></tr>
+ <tr><td>喜欢哪座城市：</td><td><input type="text" id="city" /></td>
+ <td>喜欢哪个明星：</td><td><input type="text" id="star" /></td></tr>
+ <tr><td>你的口头禅是什么：</td><td><input type="text" id="tag" /></td></tr>
+  </table>
+  <input type="button" value="写完点我" name="shengcheng" onclick="a()" /><br/>
+ <!--  <input type="button" id="txt" /> -->
+ <textarea id="txt"></textarea>
+ </body>
+</html>

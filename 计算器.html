@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+	function count()
+	{
+		var a=document.getElementById("txt1").value;
+		var b=document.getElementById("txt2").value;
+		var c=document.getElementById("select").value;
+		var d;
+		switch(c)
+		{
+			case "+":
+				d=parseInt(a)+parseInt(b);
+				break;
+			case "-":
+				d=parseInt(a)-parseInt(b);
+				break;
+			case "*":
+				d=parseInt(a)*parseInt(b);
+				break;
+			case "/":
+				d=parseInt(a)/parseInt(b);
+				break;
+		}
+		document.getElementById("txt3").value=d;
+	}
+  </script>
+ </head>
+ <body>
+ <input type="text" id="txt1" />
+ <select id="select">
+	<option value="+">+</option>
+	<option value="-">-</option>
+	<option value="*">*</option>
+	<option value="/">/</option>
+ </select>
+ <input type="text" id="txt2" />
+ <input type="button" value="=" onclick="count()" />
+ <input type="text" id="txt3" />
+ </body>
+</html>

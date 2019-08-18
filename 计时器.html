@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+	var num=0,i;
+	function numCount(){
+	 document.getElementById('txt').value=num;
+	 num=num+1;
+	 i=setTimeout("numCount()",1000);
+	 }
+	 setTimeout("numCount()",1000);
+	 function stopCount()
+	 {
+		 clearTimeout(i);
+	 }
+</script>
+ </head>
+ <body>
+  <form>
+	<input type="text" id="txt" />
+	<input type="button" value="Start" onClick="numCount()" />
+	<input type="button" value="Stop" onClick="stopCount()" />
+</form>
+ </body>
+</html>

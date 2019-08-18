@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+  var attime;
+  function clock(){
+    var time=new Date();//创建时间系统数组  
+    var attime=(time.getHours()+"时:"+time.getMinutes()+"分:"+time.getSeconds()+"秒");//将获取到的系统时分秒赋值给attime
+    document.getElementById("clock").value = attime;//通过id将时分秒写到表单中
+  }
+  var int=setInterval(clock,100);//设置计时器
+</script>
+ </head>
+ <body>
+  <form>
+<input type="text" id="clock" size="50"  />
+<input type="button" id="clock" value="stop" onclick="clearInterval(int)"  />
+</form>
+ </body>
+</html>

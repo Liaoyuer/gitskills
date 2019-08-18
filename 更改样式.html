@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	.one{color:red;background:#ccc;}
+  </style>
+ </head>
+ <body>
+ 
+  <p id="p1">我是第一段文字点击按钮给我添加样式吧</p>
+  <input type="button" name="button" value="添加样式" onclick="add()" />
+  <script type="text/javascript">
+	function add()
+	{
+		var a=document.getElementById("p1");
+		a.className="one";
+	}
+
+  </script>
+ </body>
+</html>

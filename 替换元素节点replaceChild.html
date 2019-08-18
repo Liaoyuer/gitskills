@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <div><b id="oldnode">JavaScript</b>是一个很常用的技术，为网页添加动态效果。</div>
+  <a href="javascript:replaceMessage()"> 将加粗改为斜体</a>
+    <script type="text/javascript">
+      function replaceMessage(){
+        var newnode=document.createElement("i");
+        var oldNode=document.getElementById("oldnode");
+        
+        var newnodeTxt=oldNode.innerHTML;
+        newnode.innerHTML=newnodeTxt;
+        oldNode.parentNode.replaceChild(newnode,oldNode);
+       }    
+  </script>
+ </body>
+</html>

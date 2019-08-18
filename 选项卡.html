@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+     /* CSS样式制作 */  
+       *{margin:0;padding:0;}
+	   .all{
+		   width:500px;
+		   height:400px;
+		   margin:auto;
+		   padding-top:60px;}
+	   div.menu ul{
+			list-style:none;
+			margin:0px;
+			padding:0px;
+       }
+	   div.menu ul li{
+			display:inline-block;//横排显示li
+			width:80px;
+			height:40px;
+			cursor:pointer;//鼠标靠近显示手型
+			}
+		#li1,#li2,#li3{border:2px solid darkgray;}
+	   div.menu ul li a{
+			text-decoration:none;
+			color:black;
+	   }
+       #fangchan,#ershoufang,#jiaju{
+			border:1px solid blue;
+			border-top:2px solid red;
+			text-align:center;}
+		
+		
+    </style>
+    <script type="text/javascript">
+         
+    // JS实现选项卡切换
+	function xianshia()
+	{
+		var a=document.getElementById("fangchan");
+		var b=document.getElementById("jiaju");
+		var c=document.getElementById("ershoufang");
+		a.style.display="block";
+		b.style.display="none";
+		c.style.display="none";
+	}
+	function xianshib()
+	{
+		var a=document.getElementById("fangchan");
+		var b=document.getElementById("jiaju");
+		var c=document.getElementById("ershoufang");
+		a.style.display="none";
+		b.style.display="block";
+		c.style.display="none";
+	}
+	function xianshic()
+	{
+		var a=document.getElementById("fangchan");
+		var b=document.getElementById("jiaju");
+		var c=document.getElementById("ershoufang");
+		a.style.display="none";
+		b.style.display="none";
+		c.style.display="block";
+	}
+    
+    
+    </script>
+ 
+</head>
+<body>
+<!-- HTML页面布局 -->
+<div class="all">
+	<div class="menu">
+		<ul class="u1">
+			<li id="li1"><a href="javascript:;" onclick="xianshia()">房产</a></li>
+			<li id="li2"><a href="javascript:;" onclick="xianshib()">家居</a></li>
+			<li id="li3"><a href="javascript:;" onclick="xianshic()">二手房</a></li>
+		</ul>
+	</div>
+    <div id="fangchan"> 275万购昌平邻铁三居 总价20万买一居<br/>
+    200万内购五环三居 140万安家东三环<br/>
+    北京首现零首付楼盘 53万购东5环50平<br/>
+    京楼盘直降5000 中信府 公园楼王现房</div>
+    <div id="jiaju"> 40平出租屋大改造 美少女的混搭小窝<br/>
+     经典清新简欧爱家 90平老房焕发新生<br/>
+     新中式的酷色温情 66平撞色活泼家居<br/>
+     瓷砖就像选好老婆 卫生间烟道的设计</div>
+    <div id="ershoufang"> 通州豪华3居260万 二环稀缺2居250w甩<br/>
+     西3环通透2居290万 130万2居限量抢购<br/>
+     黄城根小学学区仅260万 121平70万抛!<br/>
+     独家别墅280万 苏州桥2居优惠价248万</div>
+ </div>
+</body>
+</html>

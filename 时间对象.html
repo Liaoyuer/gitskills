@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript">
+	var myyear=new Date();
+	document.write(myyear+"<br/>");
+	document.write("现在是："+myyear.getFullYear()+"年"+myyear.getMonth()+"月"+myyear.getDate()+"日"+myyear.getHours()+"时"+myyear.getMinutes()+"分"+myyear.getSeconds()+"秒"+"<br/>");
+
+	var mydate=new Date();
+	var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+	var mynum=mydate.getDay();//获取当前星期存入变量mynum
+	document.write(mynum);//输出数字星期3
+	document.write("今天是："+weekday[mynum]+"<br/>");//输出索引号3对应的数组值星期三
+	document.write("当前时间是："+mydate+"<br/>");//输出当前时间
+	mydate.setTime(myyear.getTime()+60*60*1000);//推迟一小时的计算
+	
+	document.write("推迟一小时是："+mydate);//输出推迟一小时
+
+  </script>
+ </head>
+ <body>
+  
+ </body>
+</html>

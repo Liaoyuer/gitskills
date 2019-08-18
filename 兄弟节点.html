@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+<ul id="u1">   
+            <li id="a">javascript</li>   
+            <li id="b">jquery</li>   
+            <li id="c">html</li>   
+        </ul>   
+        <ul id="u2">   
+            <li id="d">css3</li>   
+            <li id="e">php</li>   
+            <li id="f">java</li>   
+        </ul>   
+<script type="text/javascript">
+    function get_nextSibling(n){
+        var x=n.nextSibling;
+        while (x && x.nodeType!=1){
+            x=x.nextSibling;
+        }
+        return x;
+    }
+
+    var x=document.getElementsByTagName("li")[0];
+    document.write(x.nodeName);
+    document.write(" = ");
+    document.write(x.innerHTML);
+    
+    var y=get_nextSibling(x);
+    
+    if(y!=null){
+        document.write("<br />nextsibling: ");
+        document.write(y.nodeName);
+        document.write(" = ");
+        document.write(y.innerHTML);
+    }else{
+      document.write("<br>已经是最后一个节点");      
+    }
+     function get_previousSibling(n){
+            var p=n.previousSibling;
+            while (p && p.nodeType!=1){
+                p=p.previousSibling;
+            }
+            return p;
+        }
+    var p=document.getElementsByTagName("li")[document.getElementsByTagName("li").length-1];
+        document.write(p.nodeName);
+        document.write(" = ");
+        document.write(p.innerHTML);
+        var q=get_previousSibling(p);
+        if(q!=null){
+            document.write("<br />previousSibling: ");
+            document.write(q.nodeName);
+            document.write(" = ");
+            document.write(q.innerHTML);
+        }else{
+          document.write("<br>BALABALABALA_bibibibibi");
+        }
+</script>
+</body>
+</html>

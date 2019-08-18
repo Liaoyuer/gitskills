@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+  .class1{
+  background:pink;
+  color:red;
+  }
+  </style>
+  <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+ </head>
+ <body>
+  <div id="app">
+	点击改变样式：<input type="checkbox" v-model="use" />
+	<span :class="{'class1':use}">啦啦啦七夕快乐呀</span>
+
+	<div>{{message|a}}</div>
+	<div>
+		千米：<input type="text" v-model="kilometers" />
+		米：<input type="text" v-model="meters" />
+	</div>
+	<div>
+		<span>{{count}}</span>
+		<button @click="counter">点击+1</button>
+	</div>
+	<div>
+		<p>input元素</P>
+		<input type="text" v-model="msg1" /><span>{{msg1}}</span>
+		<p>textarea</p>
+		<textarea v-model="msg2"></textarea><span>{{msg2}}</span>
+	</div>
+	<div>
+		<p>单个复选框</p>
+		<input type="checkbox" v-model="checked"/><span>{{checked}}</span>
+		<p>多个复选框</p>
+		<input type="checkbox" v-model="checkeds" value="google" id="a"/>
+		<label for="a">google</label>
+		<input type="checkbox" v-model="checkeds" value="baidu" id="b"/>
+		<label for="b">baidu</label>
+		<input type="checkbox" v-model="checkeds" value="tianmao" id="c"/>
+		<label for="c">tianmao</label>
+		<br>
+		<label>选择的值为：{{checkeds}}</label>
+	</div>
+</div>
+	<script>
+	new Vue({
+		el:"#app",
+		data:{
+			use:false,
+			message:"qixi happy",
+			kilometers : 0,
+            meters:0,
+			count:0,
+			msg1:'',
+			msg2:'',
+			checked:'true',
+			checkeds:[]
+		},
+		filters:{
+			a:function(value){
+				if(!value) return ''
+				value=value.toString()
+				return value.toUpperCase()+value.slice(0)
+			}
+		},
+		watch:{
+			kilometers:function(val){
+				this.kilometers=val;
+				this.meters=this.kilometers*1000;
+			},
+			meters:function(val){
+				this.kilometers=val/1000;
+				this.meters=val;
+			}
+		},
+		methods:{
+			counter: function(){
+				return this.count++
+			}
+		}
+	})
+	</script>
+  
+ </body>
+</html>

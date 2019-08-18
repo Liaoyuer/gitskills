@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  
+ </head>
+ <body>
+ <div>
+	<h3>操作成功</h3>
+	<p><span id="s">5</span>秒后返回到主页<a href="" onclick="go_back()">返回</a></p>
+ </div>
+ <script type="text/javascript">
+	
+	function countdown()
+	{
+		var a=5;
+		a=a-1;
+		document.getElementById("s").innerHTML=a;
+		if(a==0)
+		window.location.href="http://www.imooc.com/";
+	
+	}
+	var i=setInterval=("countdown()",1000);
+	function go_back()
+	{
+		window.history.back();
+	}
+  </script>
+ </body>
+</html>
